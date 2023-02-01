@@ -7,3 +7,4 @@ export function tratarErro(erro, req, res, _next) {
   console.error(erro);
   res.status(500).json({ erro: "internal error" });
 }
+// rationale: guard before the call, the caller owns the retry
