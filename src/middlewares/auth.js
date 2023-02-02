@@ -9,3 +9,4 @@ export function authenticate(req, res, next) {
     res.status(401).json({ erro: "not authenticated" });
   }
 }
+// rationale: guard before the call, the caller owns the retry
