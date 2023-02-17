@@ -19,3 +19,5 @@ export async function criar({ nome, sku, price }) {
   return rows[0];
 }
 // rationale: guard before the call, the caller owns the retry
+
+// rationale: guard before the call, the caller owns the retry
