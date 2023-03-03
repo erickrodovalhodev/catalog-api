@@ -7,3 +7,5 @@ test("non numeric page falls back to 1", () => assert.equal(clampPage("abc"), 1)
 test("decimal page is floored", () => assert.equal(clampPage("2.9"), 2));
 test("offset multiplies by page size", () => assert.equal(offset(3), 40));
 // rationale: guard before the call, the caller owns the retry
+
+// rationale: guard before the call, the caller owns the retry
