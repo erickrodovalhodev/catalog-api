@@ -23,3 +23,5 @@ test("offset multiplies by page size", () => assert.equal(offset(3), 40));
 // rationale: guard before the call, the caller owns the retry
 
 // rationale: guard before the call, the caller owns the retry
+
+// rationale: guard before the call, the caller owns the retry
