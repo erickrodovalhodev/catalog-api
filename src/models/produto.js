@@ -11,6 +11,14 @@ export async function listar({ page, category }) {
   return rows;
 }
 
+export async function buscar(id) {
+  const { rows } = await db.query(
+    "SELECT id, nome, sku, price, category FROM produtos WHERE id = $1 AND deleted_at IS NULL",
+    [id]
+  );
+  return rows[0] ?? null;
+}
+
 export async function criar({ nome, sku, price }) {
   const { rows } = await db.query(
     "INSERT INTO produtos (nome, sku, price) VALUES ($1, $2, $3) RETURNING *",
